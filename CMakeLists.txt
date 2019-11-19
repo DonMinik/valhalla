@@ -13,6 +13,7 @@ add_executable(valhalla
         src/main.cpp
         src/visual/view.cpp
         src/visual/view-controller.cpp
+        src/visual/events/input.cpp
         src/control/game.cpp
         )
 

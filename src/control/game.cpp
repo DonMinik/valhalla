@@ -5,6 +5,7 @@
 /*
  * controller that keeps the game running
  */
+
 Game::Game() {
     _viewController = new ViewController();
     _viewController -> init();
@@ -20,6 +21,7 @@ void Game::gameLoop() {
     _viewController -> createView();
 
     while(true){
+        _viewController ->detectEvents();
         if (_viewController ->isExited()){
             return;
         }
