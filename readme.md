@@ -26,6 +26,8 @@ This is a one man pet project. Therefore it is highly unlikely to be finished at
 
 - fighting is only able when the party is heaten up enough by alcohol and swears
 
+- fighting agains other players offers them the chance to dodge and either run away or counter attack
+
 - Setting: Nordish longhouse
 
 - some sort of combo mechanics like drinking and beating another player with your horn of mead at the same time
