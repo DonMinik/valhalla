@@ -9,7 +9,12 @@ include_directories(${SDL2_INCLUDE_DIRS})
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(valhalla src/main.cpp src/visual/view.cpp src/control/game.cpp)
+add_executable(valhalla
+        src/main.cpp
+        src/visual/view.cpp
+        src/visual/view-controller.cpp
+        src/control/game.cpp
+        )
 
 target_link_libraries(valhalla ${SDL2_LIBRARIES} )
 
