@@ -14,7 +14,6 @@ View::View() {
     SDL_Surface* screenSurface = SDL_GetWindowSurface(this -> _window);
     SDL_FillRect(screenSurface, NULL, SDL_MapRGB(screenSurface -> format, 0xFF, 0xFF, 0xFF));
     SDL_UpdateWindowSurface(this -> _window);
-    SDL_Delay(10000);
 }
 
 View::~View() {

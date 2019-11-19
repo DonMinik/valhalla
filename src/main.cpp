@@ -1,9 +1,9 @@
-#include "visual/view.h"
+#include "control/game.h"
 /**
  * starter
  *
  */
 int main() {
-    View view;
+    Game game;
     return 0;
 }
