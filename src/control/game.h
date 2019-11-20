@@ -1,10 +1,13 @@
-
 #ifndef VALHALLA_GAME_H
 #define VALHALLA_GAME_H
 
 class View;
 class ViewController;
 
+
+/*
+ * controller that keeps the game running
+ */
 class Game {
 public:
     Game();
@@ -12,8 +15,6 @@ public:
 
 private:
     void gameLoop();
-    void draw(View &graphics);
-    void update(float elapsedTime);
     ViewController* _viewController;
 };
 

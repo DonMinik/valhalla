@@ -1,5 +1,3 @@
-
-
 #ifndef VALHALLA_INPUT_H
 #define VALHALLA_INPUT_H
 
