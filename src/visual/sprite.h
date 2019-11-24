@@ -18,9 +18,10 @@ public:
     void draw(View* view, int x, int y);
 
 private:
-    SDL_Rect _sourceRect;
-    SDL_Texture* _spriteSheet;
 
     float _x, _y;
+protected:
+    SDL_Rect _sourceRect;
+    SDL_Texture* _spriteSheet;
 };
 #endif //VALHALLA_SPRITE_H

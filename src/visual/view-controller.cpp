@@ -24,7 +24,10 @@ void ViewController::init() {
 void ViewController::createView() {
      _view = new View();
     _input = new Input();
-    _playerSprite =  Sprite(_view, "../resources/sprites/player.png", 0, 0, 250, 250, 100, 100);
+    _playerSprite =  AnimatedSprite(_view, "../resources/sprites/player.png", 0, 0, 250, 250, 100, 100, 100);
+    _playerSprite.setupAnimations();
+    _playerSprite.playAnimation("run_right");
+
 
     draw();
     _lastUpdateTime = SDL_GetTicks();
@@ -50,12 +53,13 @@ void ViewController::endFrame() {
     const int CURRENT_TIME_MS = SDL_GetTicks();
     int elapsedTimeMS = CURRENT_TIME_MS - _lastUpdateTime;
     update(std::min(elapsedTimeMS, MAX_FRAME_TIME));
+    draw();
     _lastUpdateTime = CURRENT_TIME_MS;
 
 }
 
 void ViewController::update(float elapsedTime) {
-
+    _playerSprite.update(elapsedTime);
 }
 
 void ViewController::draw() {
