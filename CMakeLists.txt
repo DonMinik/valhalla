@@ -13,7 +13,7 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable(valhalla
         src/main.cpp
         src/visual/animated-sprite.cpp
-        src/visual/player.cpp
+        src/visual/characters/player.cpp
         src/visual/sprite.cpp
         src/visual/view.cpp
         src/visual/view-controller.cpp

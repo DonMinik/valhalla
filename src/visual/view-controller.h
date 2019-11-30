@@ -1,7 +1,7 @@
 #ifndef VALHALLA_VIEW_CONTROLLER_H
 #define VALHALLA_VIEW_CONTROLLER_H
 
-#include "player.h"
+#include "characters/player.h"
 
 class View;
 class Input;

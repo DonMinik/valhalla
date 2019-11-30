@@ -1,9 +1,9 @@
 #ifndef VALHALLA_PLAYER_H
 #define VALHALLA_PLAYER_H
 
-#include "animated-sprite.h"
+#include "../animated-sprite.h"
 #include  <string>
-#include "globals.h"
+#include "../globals.h"
 
 class View;
 
