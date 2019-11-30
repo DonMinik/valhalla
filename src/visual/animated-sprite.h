@@ -33,10 +33,7 @@ public:
      * @param y
      */
     void draw(View* view, int x, int y);
-    /**
-     * required method, that sets up all animations
-     */
-    virtual void setupAnimations();
+
 
 protected:
     double _timeToUpdate;
@@ -71,7 +68,11 @@ protected:
      * when animation is ends
      * @param currentAnimation
      */
-    virtual void onAnimationDone(std::string currentAnimation);
+    virtual void onAnimationDone(std::string currentAnimation) = 0;
+    /**
+      * required method, that sets up all animations
+      */
+    virtual void setupAnimations() = 0;
 private:
     std::map<std::string, std::vector<SDL_Rect>>_animations;
     std::map<std::string, Vector2D> _offsets;

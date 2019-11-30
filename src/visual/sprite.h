@@ -17,8 +17,7 @@ public:
     virtual void update();
     void draw(View* view, int x, int y);
 
-private:
-
+protected:
     float _x, _y;
 protected:
     SDL_Rect _sourceRect;

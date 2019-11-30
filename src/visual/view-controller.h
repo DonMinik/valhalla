@@ -1,8 +1,7 @@
 #ifndef VALHALLA_VIEW_CONTROLLER_H
 #define VALHALLA_VIEW_CONTROLLER_H
 
-
-#include "animated-sprite.h"
+#include "player.h"
 
 class View;
 class Input;
@@ -30,7 +29,7 @@ public:
 private:
     View* _view;
     Input* _input;
-    AnimatedSprite _playerSprite;
+    Player _playerSprite;
 
     bool _exited;
     int _lastUpdateTime;

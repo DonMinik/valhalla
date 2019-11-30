@@ -6,6 +6,8 @@ Sprite::Sprite() {}
 
 Sprite::Sprite(View* view, const std::string &filePath, int sourceX, int sourceY, int width, int height, float posX,
                float posY) {
+    _x = posX;
+    _y = posY;
 
     _sourceRect.x = sourceX;
     _sourceRect.y = sourceY;
@@ -21,6 +23,11 @@ Sprite::Sprite(View* view, const std::string &filePath, int sourceX, int sourceY
 Sprite::~Sprite() {}
 
 void Sprite::draw(View* view, int x, int y) {
+
+    /* Todo: update x and y?
+     _x = x;
+    _y = y; */
+
     SDL_Rect destinationRectangle = {x, y, _sourceRect.w * globals::SPRITE_SCALE, _sourceRect.h * globals::SPRITE_SCALE};
     view -> drawToSurface(_spriteSheet, &_sourceRect, &destinationRectangle);
 }

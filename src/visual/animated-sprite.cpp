@@ -77,11 +77,3 @@ void AnimatedSprite::draw(View* view, int x, int y) {
        view -> drawToSurface(_spriteSheet, &sourceRect, &destinationRectangle);
     }
 }
-
-void AnimatedSprite::onAnimationDone(std::string currentAnimation) {
-
-}
-
-void AnimatedSprite::setupAnimations() {
-    addAnimation(3, 0, 250, "run_right", 250, 250, Vector2D(0,0)); // player running right
-}

@@ -24,9 +24,7 @@ void ViewController::init() {
 void ViewController::createView() {
      _view = new View();
     _input = new Input();
-    _playerSprite =  AnimatedSprite(_view, "../resources/sprites/player.png", 0, 0, 250, 250, 100, 100, 100);
-    _playerSprite.setupAnimations();
-    _playerSprite.playAnimation("run_right");
+    _playerSprite =  Player(_view, 100, 100);
 
 
     draw();
@@ -46,6 +44,14 @@ void ViewController::detectEvents() {
         } else if (event.type == SDL_QUIT) {
             _exited = true;
         }
+
+        if (_input->isKeyHeld(SDL_SCANCODE_LEFT)) {
+            _playerSprite.moveLeft();
+        } else if (_input -> isKeyHeld(SDL_SCANCODE_RIGHT)) {
+            _playerSprite.moveRight();
+        } else {
+            _playerSprite.stopMoving();
+        }
     }
 }
 
@@ -64,7 +70,7 @@ void ViewController::update(float elapsedTime) {
 
 void ViewController::draw() {
     _view -> clear();
-    _playerSprite.draw(_view, 100, 100);
+    _playerSprite.draw(_view);
 
     _view -> render();
 }
