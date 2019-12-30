@@ -33,6 +33,6 @@ This is a one man pet project. Therefore it is highly unlikely to be finished at
 - some sort of combo mechanics like drinking and beating another player with your horn of mead at the same time
 
 ## Implementation Stuff
-####Dependencies
+#### Dependencies
 - SDL 2
 - SDL Image
