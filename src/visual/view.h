@@ -1,6 +1,7 @@
 #ifndef VALHALLA_VIEW_H
 #define VALHALLA_VIEW_H
 
+#include <SDL2/SDL.h>
 #include <map>
 #include <string>
 struct SDL_Window;

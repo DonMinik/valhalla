@@ -26,6 +26,7 @@ void ViewController::createView() {
     _input = new Input();
     _playerSprite =  Player(_view, 100, 100);
 
+    _level = Level("greatHall", Vector2D(100, 100), _view);
 
     draw();
     _lastUpdateTime = SDL_GetTicks();
@@ -66,12 +67,13 @@ void ViewController::endFrame() {
 
 void ViewController::update(float elapsedTime) {
     _playerSprite.update(elapsedTime);
+    _level.update(elapsedTime);
 }
 
 void ViewController::draw() {
     _view -> clear();
+    _level.draw(_view);
     _playerSprite.draw(_view);
-
     _view -> render();
 }
 

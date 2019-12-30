@@ -2,6 +2,7 @@
 #define VALHALLA_VIEW_CONTROLLER_H
 
 #include "characters/player.h"
+#include "levels/level.h"
 
 class View;
 class Input;
@@ -29,7 +30,10 @@ public:
 private:
     View* _view;
     Input* _input;
+
     Player _playerSprite;
+
+    Level _level;
 
     bool _exited;
     int _lastUpdateTime;
